@@ -29,4 +29,12 @@ class US_State_Codes(Resource):
 
 api.add_resource(US_State_Codes, "/us_state_codes/<string:name>")
 
+@app.route('/')
+def index():
+    html = "US State Codes<p>"
+    html += "<a href='/us_state_codes/Colorado'>Colorado</a><br>"
+    html += "<a href='/us_state_codes/Florida'>Florida</a><br>"
+    html += "<a href='/us_state_codes/New York'>New York</a><br>"
+    return html
+
 app.run(debug=True)
