@@ -24,5 +24,11 @@ pytest # runs all test cases
 
 py.test test/test_GET_Colorado.tavern.yaml -v  # To test the Colorado endpoint
 
+Using any browser, navigate to http://127.0.0.1:5000/  # Shows home page
+
+webdriverdownloader chrome  # installs the chrome driver for selenium, you will need to add this to your PATH for pytest-selenium to discover it
+
+pytest --driver chrome  # Using selenium, opens Chrome and asserts page element
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
