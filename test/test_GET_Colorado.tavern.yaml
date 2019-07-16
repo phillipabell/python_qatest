@@ -1,0 +1,16 @@
+---
+test_name: GET Colorado
+
+stages:
+  - name: Assert that GET Colorado returns a valid response
+
+    request:
+      url: http://127.0.0.1:5000/us_state_codes/Colorado
+      method: GET
+
+    # ...and the expected response code and body
+    response:
+      status_code: 200
+      body:
+        us-state: "Colorado"
+        us-state-code: "CO"
